@@ -1,0 +1,171 @@
+ Git and GitHub
+
+
+GIT and GITHUB from Command line
+---------------------------------
+
+Mac -> Terminal
+Windows -> Powershell
+
+www.git-scm.com
+----------------------------------
+
+Installing git.
+---------------
+
+git --version
+----------------------------------
+
+What is GIT?
+
+Version control system.
+
+Version control examples:
+
+Keep different versions of code.
+--------------------------------
+1) Keep track of changes to code.
+
+2) Synchronizes code between different people.
+
+3) Test your code without losing the original
+
+4) Revert back to older versions of code.
+--------------------------------
+
+Different types of version control systems.
+
+1) Central repository
+2) Distributed repository -> GIT
+
+DVCS -> Distributed Version Control System
+
+Similar tools like Git - CVS , SVN.
+===========================================
+
+GIT vs GITHUB?
+
+Github is a Central repository in the cloud that is used
+to store Git repositories.
+
+GIT -> GITHUB
+GIT -> BITBUCKET
+GIT -> GITLAB
+
+GITHUB -> Central or Remote repository
+
+Git LOCAL repository
+===============================
+
+GIT COMMANDS:
+
+git --version --> see which version of GIT
+you have
+git help -> shows you mostly used COMMANDS
+----------------
+
+Introduce yourself to git. Do once.
+--------------------
+
+git config --global user.name "CybertekSchool"
+git config --global user.email github@cybertekschool.com
+git config --global color.ui true
+=======================
+
+Create folders:
+
+/Users/userName/git/MyFirstGitRepo
+C:\Users\userName\git\MyFirstGitRepo
+
+===================
+Create local git repository:
+
+git init
+===================
+
+git status
+Show me current status whats happening in repository.
+=======================
+
+1) By using finder or folder explorer:
+please goto Documents
+Create a new folder called MyFirstGitRepo.
+
+2) yes, now open terminal / powershell and navigate
+into that folder.
+
+cd Documents
+cd MyFirstGitRepo
+
+========================
+Whenever a new file is created - it will be in
+UNTRACKED status. git will not automatically start
+tracking/looking at it
+
+git add -> add newly added files or folders to staging area
+-> add modified files to staging area
+
+Everytime you make changes to any of files in LOCAL
+repository : you will need to add it to staging area
+before each commit.
+
+git commit -m "message" -> looks at staging area and takes
+a snapshot and saves it as a commit in local repository.
+
+git add .
+git add *
+adds all new or modified files to staging area.
+
+git add filename
+git add .
+
+--------
+
+git log
+-> view commit history. commit hash ,author, timestamp
+,comment
+==================
+
+git diff -> show difference between last commit and
+whatever was modified after that.
+
+Files that are UNTRACKED will not show up here.
+==================
+
+git reset filename
+-> remove the file from staging area and dont include into
+commit
+
+-----------------
+
+git commit -a -m "add and commit in one command"
+
+git add *
+git commit -m "add and commit in one command"
+
+COMBINE into single command.
+
+git commit -a -m "add and commit in one command"
+================================
+
+2 ways to link local and remote repositories:
+
+1) git remote add origin pathToGitHubRepo
+
+ 
+
+git remote add origin https://github.com/CybertekSchool/MyFirstGitRepo.git
+
+git push -u origin master
+====================================
+Push local eclipse project to github repository:
+
+Did you create FirstSeleniumProject in eclipse?
+
+yes/no -> yes
+
+1) Right click on project >
+properties > Resource > copy location
+
+2)Open terminal or powershell
+cd /Users/cybertekschool/JavaPrgs/FirstSeleniumProject
